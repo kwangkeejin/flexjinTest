@@ -1,4 +1,4 @@
-/* AssignFile ¿¹Á¦ */ -¼öÁ¤
+/* AssignFile ì˜ˆì œ */ 
 var 
 
   F: TextFile;
@@ -15,10 +15,10 @@ begin
 end;
 
 
--- ¹Ýº¹ÇÒ¶§
+-- ë°˜ë³µí• ë•Œ
 while not EOF(F) do
 begin
-// readLn ±¸¹®
+// readLn êµ¬ë¬¸
 end;
 
 
@@ -26,7 +26,7 @@ end;
 
 
 
-/* SeekEof ¿¹Á¦ */
+/* SeekEof ì˜ˆì œ */
 var
 
    f : System.TextFile;
