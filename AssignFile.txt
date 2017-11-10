@@ -1,0 +1,53 @@
+/* AssignFile 예제 */
+var 
+
+  F: TextFile;
+  S: string;
+begin
+  if OpenDialog1.Execute then            { Display Open dialog box }
+  begin
+    AssignFile(F, OpenDialog1.FileName); { File selected in dialog }
+    Reset(F);
+    Readln(F, S);                        { Read first line of file }
+    Edit1.Text := S;                     { Put string in a TEdit control }
+    CloseFile(F);
+  end;
+end;
+
+
+-- 반복할때
+while not EOF(F) do
+begin
+// readLn 구문
+end;
+
+
+
+
+
+
+/* SeekEof 예제 */
+var
+
+   f : System.TextFile;
+   i, j, Y : Integer;
+ begin
+   AssignFile(f,'TEST.TXT');
+   Rewrite(f);
+   { Create a file with 8 numbers and some
+     whitespace at the ends of the lines }
+   Writeln(f,'1 2 3 4 ');
+   Writeln(f,'5 6 7 8 ');
+   Reset(f);
+   { Read the numbers back. SeekEof returns TRUE if there is no 
+     more text (other than whitespace) in the file. }
+   Y := 5;
+   while not SeekEof(f) do
+   begin
+     Read(f,j);
+
+     Canvas.TextOut(5, Y, IntToStr(j));
+     Y := Y + Canvas.TextHeight(IntToStr(j)) + 5;
+   end;
+
+ end;
