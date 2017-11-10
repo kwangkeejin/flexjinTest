@@ -1,4 +1,4 @@
-/* AssignFile 예제 */
+/* AssignFile 예제 */ -수정
 var 
 
   F: TextFile;
